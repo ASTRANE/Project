@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.custom-select {
+    position: relative;
+    width: 200px;
+    user-select: none;
+    transition: 1s ease;
+}
+
+.selected {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.options-container {
+    position: absolute;
+    top: 0vw;
+    left: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: none;
+    z-index: 1000;
+    max-height: 200px; /* Set a max height for the dropdown */
+    overflow-y: auto;  /* Enable vertical scrolling if necessary */
+    transition: 1s ease;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-select:hover .options-container {
+    display: flex;
+}
